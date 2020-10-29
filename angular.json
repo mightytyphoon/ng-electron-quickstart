@@ -26,7 +26,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "electron.main.js",
+                "inject": false
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -34,6 +39,10 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "electron.main.js",
+                  "with": "electron.prod.js"
                 }
               ],
               "optimization": true,
